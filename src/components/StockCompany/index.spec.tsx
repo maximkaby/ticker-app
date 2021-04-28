@@ -3,7 +3,7 @@ import StockCompany from "./index";
 import { render, screen } from '@testing-library/react';
 import {StockInfo} from "types/common";
 
-describe('wq', () => {
+describe('StockCompany', () => {
   it('render default', () => {
     const initialStock: StockInfo = {
       value: '',
