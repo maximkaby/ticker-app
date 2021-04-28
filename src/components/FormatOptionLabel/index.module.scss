@@ -1,0 +1,42 @@
+.label {
+  display: flex;
+  justify-content: space-between;
+
+  &__data {
+    display: flex;
+  }
+
+  &__img {
+    width: 42px;
+    margin-right: 28px;
+  }
+
+  &__info {
+    display: flex;
+    flex-direction: column;
+    text-align: left;
+  }
+  &__name {
+    font-family: Poppins;
+    font-style: normal;
+    font-weight: 500;
+    font-size: 15px;
+    color: #00264C;
+  }
+  &__description {
+    font-family: Poppins;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 13px;
+    color: #8FA7BD;
+  }
+  &__price {
+    display: flex;
+    align-items: center;
+    font-family: Poppins;
+    font-style: normal;
+    font-weight: 500;
+    font-size: 23px;
+    color: #37AD94;
+  }
+}
