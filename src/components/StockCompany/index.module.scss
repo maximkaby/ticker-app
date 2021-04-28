@@ -1,0 +1,57 @@
+.stock {
+
+  margin-top: 90px;
+  font-family: Poppins;
+
+
+  &__logo {
+    margin-bottom: 34px;
+
+    img {
+      min-width: 93px;
+      max-width: 120px;
+    }
+  }
+
+  &__name {
+    margin-bottom: 5px;
+    font-size: 23px;
+    color: #00264C;
+  }
+
+  &__description {
+    margin-bottom: 24px;
+    font-size: 17px;
+    color: #728BA3;
+  }
+
+  &__value {
+    margin-bottom: 8px;
+    font-style: normal;
+    font-weight: 600;
+    font-size: 30px;
+    line-height: 40px;
+    color: #00264C;
+  }
+  &__changes {
+    font-size: 17px;
+    color: #37AD94;
+
+    &--down {
+      color: indianred;
+      svg {
+        transform: rotate(180deg);
+      }
+      path {
+        stroke: indianred!important;
+      }
+    }
+
+    .changes__diff {
+      margin-right: 5px;
+    }
+    .changes__percents {
+      margin-right: 15px;
+    }
+  }
+}

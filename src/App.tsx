@@ -1,24 +1,28 @@
-import React from 'react';
-import logo from './logo.svg';
-import './App.css';
+import React, { useState } from 'react';
+import StockCompany from "./components/StockCompany";
+import Search from "./components/Search";
+import { StockInfo } from "types/common";
+import './App.scss';
 
 function App() {
+  const initialStock: StockInfo = {
+    value: '',
+    label: '',
+    ticker: '',
+    name: '',
+  };
+  const [stock, setStock] = useState<StockInfo>(initialStock);
+
+  const changeStock = (newStock: StockInfo | null) => {
+    setStock(newStock || initialStock);
+  }
+
   return (
     <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.tsx</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+      <div className="container">
+        <Search changeStock={changeStock}></Search>
+        <StockCompany stock={stock}/>
+      </div>
     </div>
   );
 }
